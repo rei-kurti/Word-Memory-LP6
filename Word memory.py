@@ -12,7 +12,8 @@ def play():
     count = 2 # Initialized at 2 so we have at least 2 new words at the beginning
     while lives > 0:
         if count == 0:
-            word = random.choice(prev_words)
+            temp = list(prev_words)
+            word = random.choice(temp)
             count = random.randint(2,4)
         else:
             word = random.choice(all_words)
